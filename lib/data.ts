@@ -160,7 +160,7 @@ export const projectsDataDetail = [
     id: 2,
     slug: "blog-app",
     title: "Blog Application",
-    github: "https://github.com/alexnguyen03/f4education",
+    github: "https://github.com/hientt1803/augentern-blog-app",
     feature: [
       "login, log-out, forgot-password,..",
       "checkout (PayPal, VNPay)",
@@ -184,7 +184,7 @@ export const projectsDataDetail = [
     id: 3,
     slug: "phone-store-manager",
     title: "Phone Store Managerment",
-    github: "https://github.com/alexnguyen03/f4education",
+    github: "https://github.com/alexnguyen03/PhoneSystem",
     feature: [
       "login, log-out, forgot-password,..",
       "checkout (PayPal, VNPay)",
@@ -202,7 +202,7 @@ export const projectsDataDetail = [
     id: 4,
     slug: "full-stack-ecomerce",
     title: "Full Stack E-Commerce",
-    github: "https://github.com/alexnguyen03/f4education",
+    github: "https://github.com/hientt1803/e-commerce-app-springboot-and-reactjs",
     feature: [
       "login, log-out, forgot-password,..",
       "checkout (PayPal, VNPay)",
