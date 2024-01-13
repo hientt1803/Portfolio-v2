@@ -33,7 +33,7 @@ export default function Project({
       className="group mb-3 sm:mb-8 last:mb-0"
     >
       <Link href={`/project/${slug}`}>
-        <section className="bg-gray-100 max-w-[42rem] h-full border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
+        <section className="bg-gray-100 max-w-[42rem] h-full border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[22rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
           <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
             <h3 className="text-2xl font-semibold">{title}</h3>
             <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
@@ -55,6 +55,8 @@ export default function Project({
             src={imageUrl}
             alt="Project I worked on"
             quality={95}
+            width={300}
+            height={300}
             className="absolute hidden sm:block top-8 bottom-0 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
         transition 
         group-hover:scale-[1.04]

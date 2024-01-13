@@ -35,14 +35,6 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated FPT Polytechnic Can Tho",
-    location: "Can Tho, Viet Nam",
-    description:
-      "I graduated after 2 year and 4 months of studying. I immediately found a job as a front-end or back-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "12/2023",
-  },
-  {
     title: "intern Back-End Developer at CUSC *",
     location: "Can Tho, Viet Nam",
     description:
@@ -57,6 +49,14 @@ export const experiencesData = [
       "I'm working as a full-stack developer at my themsis graduate. My stack includes React, Boootstrap, SCSS, Java (spring framework) and SQL Server. And i'm always open to full-time opportunities.",
     icon: React.createElement(FaReact),
     date: "09/2023 - 12/2023",
+  },
+  {
+    title: "Graduated FPT Polytechnic Can Tho",
+    location: "Can Tho, Viet Nam",
+    description:
+      "I graduated after 2 year and 4 months of studying. I immediately found a job as a front-end or back-end developer.",
+    icon: React.createElement(LuGraduationCap),
+    date: "12/2023",
   },
   {
     title: "Open to full-time job",
@@ -79,9 +79,10 @@ export const projectsData = [
       "React",
       "Mantine",
       "SQL Server",
-      "Bootstrap, SCSS",
       "Figma",
       "Firebase",
+      "Java (spring boot)",
+      "RestFull APIs",
     ],
     imageUrl: corpcommentImg,
   },
@@ -92,7 +93,8 @@ export const projectsData = [
     description:
       "i worked as a full-stack developer. It has features like post new post, comments, like, share,...",
     tags: ["Next.js", "taildwind, SCSS", "Prisma", "MongoDB"],
-    imageUrl: rmtdevImg,
+    imageUrl:
+      "https://plus.unsplash.com/premium_photo-1684581214880-2043e5bc8b8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZyUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 3,
@@ -108,7 +110,7 @@ export const projectsData = [
     slug: "full-stack-ecomerce",
     title: "Full Stack E-Commerce",
     description:
-      "i worked as a full-stack developer. It has features like a e-commerce website where people can buy technology toy like earpods, bettary,...",
+      "i worked as a full-stack developer. It has features like a e-commerce website where people can buy technology toy like earpods,...",
     tags: [
       "React",
       "Spring boot",
@@ -117,7 +119,8 @@ export const projectsData = [
       "SQL Server",
       "Figma",
     ],
-    imageUrl: wordanalyticsImg,
+    imageUrl:
+      "https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YmxvZyUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D",
   },
 ] as const;
 
@@ -170,17 +173,11 @@ export const projectsDataDetail = [
       "i worked as a full-stack developer. It has features like post new post, comments, like, share,...",
     tags: ["Next.js", "taildwind, SCSS", "Prisma", "MongoDB"],
     listImage: [
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/1-fullscr.png?alt=media&token=1d0b3e93-25f9-4d97-b54d-3f241e7ab382",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/10-full.png?alt=media&token=6d08c654-320a-489f-950e-3fc460b8545e",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/2-fullscr.png?alt=media&token=e47d54cb-120b-42cd-aa4e-08994251093d",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/3-fullscr.png?alt=media&token=b98aaf74-d31e-4cd2-af65-3027182951e7",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/4-fullscr.png?alt=media&token=163eb2fd-676a-4be5-844a-c5497bfafabc",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/6-fullscr.png?alt=media&token=437fa5ef-3aa7-4739-809f-d455d9a7475d",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/7-fullsrc.png?alt=media&token=f5bc75d9-f5d7-43c5-ae63-12612f864adb",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/8-halfsrc.png?alt=media&token=76e6f86b-292c-4960-812d-e90d98517374",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/9-full.png?alt=media&token=e905d464-2436-4b79-9fe1-5d64ec0a460a",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/classResult.png?alt=media&token=80fe9c70-0501-4b8c-8e8f-037710ca19cc",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/teacher-class_result.png?alt=media&token=c440a78c-220b-427b-8922-2d8ff6cf26f8",
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/augen-blog%2F1.png?alt=media&token=022e13b3-6225-4d24-89e6-4054a1cd1327",
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/augen-blog%2F2.png?alt=media&token=046d901a-5c04-4a04-80ed-6f9e95c2d2d3",
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/augen-blog%2F3.png?alt=media&token=d42176ec-9062-420b-bc53-5c6b9ec378c5",
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/augen-blog%2F4.png?alt=media&token=cac7c0d7-872d-4b65-acf3-030207391828",
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/augen-blog%2F5.jpeg?alt=media&token=a4af4a80-e1ab-41ef-a57d-24053e47de77",
     ],
   },
   {
@@ -199,19 +196,7 @@ export const projectsDataDetail = [
     description:
       "A window app for quick managerment phone store. we can manager products, user, Discount, Order, statictis.",
     tags: ["Java Swing", "SQL Server", "Figma"],
-    listImage: [
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/1-fullscr.png?alt=media&token=1d0b3e93-25f9-4d97-b54d-3f241e7ab382",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/10-full.png?alt=media&token=6d08c654-320a-489f-950e-3fc460b8545e",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/2-fullscr.png?alt=media&token=e47d54cb-120b-42cd-aa4e-08994251093d",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/3-fullscr.png?alt=media&token=b98aaf74-d31e-4cd2-af65-3027182951e7",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/4-fullscr.png?alt=media&token=163eb2fd-676a-4be5-844a-c5497bfafabc",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/6-fullscr.png?alt=media&token=437fa5ef-3aa7-4739-809f-d455d9a7475d",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/7-fullsrc.png?alt=media&token=f5bc75d9-f5d7-43c5-ae63-12612f864adb",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/8-halfsrc.png?alt=media&token=76e6f86b-292c-4960-812d-e90d98517374",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/9-full.png?alt=media&token=e905d464-2436-4b79-9fe1-5d64ec0a460a",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/classResult.png?alt=media&token=80fe9c70-0501-4b8c-8e8f-037710ca19cc",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/teacher-class_result.png?alt=media&token=c440a78c-220b-427b-8922-2d8ff6cf26f8",
-    ],
+    listImage: [],
   },
   {
     id: 4,
@@ -229,19 +214,7 @@ export const projectsDataDetail = [
     description:
       "i worked as a full-stack developer. It has features like a e-commerce website where people can buy technology toy like earpods, bettary,...",
     tags: ["Java Swing", "SQL Server", "Figma"],
-    listImage: [
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/1-fullscr.png?alt=media&token=1d0b3e93-25f9-4d97-b54d-3f241e7ab382",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/10-full.png?alt=media&token=6d08c654-320a-489f-950e-3fc460b8545e",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/2-fullscr.png?alt=media&token=e47d54cb-120b-42cd-aa4e-08994251093d",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/3-fullscr.png?alt=media&token=b98aaf74-d31e-4cd2-af65-3027182951e7",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/4-fullscr.png?alt=media&token=163eb2fd-676a-4be5-844a-c5497bfafabc",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/6-fullscr.png?alt=media&token=437fa5ef-3aa7-4739-809f-d455d9a7475d",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/7-fullsrc.png?alt=media&token=f5bc75d9-f5d7-43c5-ae63-12612f864adb",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/8-halfsrc.png?alt=media&token=76e6f86b-292c-4960-812d-e90d98517374",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/9-full.png?alt=media&token=e905d464-2436-4b79-9fe1-5d64ec0a460a",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/classResult.png?alt=media&token=80fe9c70-0501-4b8c-8e8f-037710ca19cc",
-      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/teacher-class_result.png?alt=media&token=c440a78c-220b-427b-8922-2d8ff6cf26f8",
-    ],
+    listImage: [],
   },
 ] as const;
 

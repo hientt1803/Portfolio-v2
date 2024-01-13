@@ -1,23 +1,31 @@
 "use client";
 
-import { useRef } from "react";
 import SectionHeading from "@/components/section-heading";
 import { projectsDataDetail } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaChevronCircleLeft } from "react-icons/fa";
-import { motion, useScroll, useTransform } from "framer-motion";
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
 
 const ProjectDetailPage = ({ params }) => {
   const data = projectsDataDetail.filter((item) => item.slug === params.slug);
 
-  // const ref = useRef < HTMLDivElement > null;
-  // const { scrollYProgress } = useScroll({
-  //   target: ref,
-  //   offset: ["0 1", "1.33 1"],
-  // });
-  // const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  // const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const { ref } = useSectionInView("Skills");
 
   return (
     <div className="container mx-auto px-auto ">
@@ -34,25 +42,25 @@ const ProjectDetailPage = ({ params }) => {
       <section className="mb-28 w-full flex-col md:flex-row text-center sm:mb-0 mt-14 flex justify-center">
         <div className="flex flex-1 flex-col items-start gap-3">
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-500 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
               PROJECT
             </p>
             <p className="text-2xl font-bold">{data[0]?.title}</p>
           </div>
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-500 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
               YEAR
             </p>
             <p className="text-2xl font-bold">{data[0]?.date}</p>
           </div>
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-500 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
               GITHUB
             </p>
             <p className="text-2xl font-bold">{data[0]?.github}</p>
           </div>
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-500 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
               TECHNOLOGY
             </p>
             <p className="text-2xl font-bold text-start">
@@ -68,7 +76,7 @@ const ProjectDetailPage = ({ params }) => {
         </div>
         <div className="flex flex-1 flex-col items-start gap-3">
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-500 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
               DESCRIPTION
             </p>
             <p className="text-2xl font-bold text-start">
@@ -76,7 +84,7 @@ const ProjectDetailPage = ({ params }) => {
             </p>
           </div>
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-500 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
               FEATURE
             </p>
             <ul className="text-2xl font-bold text-start">
@@ -95,28 +103,46 @@ const ProjectDetailPage = ({ params }) => {
           Take a tour around projects
         </p>
         <div className="mt-28 relative">
-          {data[0]?.listImage.map((item, index) => (
-            // <motion.div
-            //   key={index}
-            //   ref={ref}
-            //   style={{
-            //     scale: scaleProgess,
-            //     opacity: opacityProgess,
-            //   }}
-            //   className="group mb-3 sm:mb-8 last:mb-0"
-            // >
-            <Image
-              key={index}
-              src={item}
-              alt={item}
-              width={1000}
-              height={600}
-              layout="responsive"
-              loading="lazy"
-              className="object-cover shadow-md border mb-10"
-            />
-            // </motion.div>
-          ))}
+          {data[0]?.listImage.length === 0 ? (
+            <>
+              <div className="my-28 py-28">
+                <p className="text-base text-center">
+                  IMAGE WILL BE UPDATE SOON AS POSIBLE
+                </p>
+                <p className="text-6xl font-bold text-center">
+                  Sorry for the inconvenience.
+                </p>
+              </div>
+            </>
+          ) : (
+            <>
+              {data[0]?.listImage.map((item, index) => (
+                <motion.div
+                  className="bg-white borderBlack rounded-xl px-5 mb-3 dark:bg-white/10 dark:text-white/80"
+                  key={index}
+                  variants={fadeInAnimationVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={index}
+                >
+                  <Image
+                    key={index}
+                    src={item}
+                    alt={item}
+                    width={1000}
+                    height={500}
+                    quality={80}
+                    layout="responsive"
+                    loading="lazy"
+                    className="object-cover shadow-md border mb-10"
+                  />
+                </motion.div>
+              ))}
+            </>
+          )}
         </div>
       </section>
 
