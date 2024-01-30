@@ -12,7 +12,7 @@ const fadeInAnimationVariants = {
     opacity: 0,
     y: 100,
   },
-  animate: (index) => ({
+  animate: (index: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -21,7 +21,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-const ProjectDetailPage = ({ params }) => {
+const ProjectDetailPage = ({ params }: any) => {
   const data = projectsDataDetail.filter((item) => item.slug === params.slug);
 
   return (
