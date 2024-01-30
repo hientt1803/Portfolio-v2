@@ -76,7 +76,7 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
-        }} 
+        }}
       >
         <Link
           href="#contact"
@@ -92,8 +92,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/Tran-Trong-Hien-CV.pdf"
-          download
+          href="/cv/MyResume.pdf"
         >
           Download CV{" "}
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
@@ -101,7 +100,7 @@ export default function Intro() {
 
         <a
           className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/hi%E1%BA%BFn-tr%E1%BA%A7n-49b774256/"
           target="_blank"
         >
           <BsLinkedin />

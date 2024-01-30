@@ -88,21 +88,21 @@ export const projectsData = [
   },
   {
     id: 2,
-    slug: "blog-app",
-    title: "Blog Application",
+    slug: "notion-clone",
+    title: "Notion clone",
     description:
-      "i worked as a full-stack developer. It has features like post new post, comments, like, share,...",
-    tags: ["Next.js", "taildwind, SCSS", "Prisma", "MongoDB"],
+      "i worked as a full-stack developer. It has features like notion,...",
+    tags: ["Next.js", "taildwind", "Convex", "Clerk"],
     imageUrl:
       "https://plus.unsplash.com/premium_photo-1684581214880-2043e5bc8b8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZyUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 3,
-    slug: "phone-store-manager",
-    title: "Phone Store Managerment",
+    slug: "blog-app",
+    title: "Blog Application",
     description:
-      "A window app for quick managerment phone store. we can manager products, user, Discount, Order, statictis.",
-    tags: ["Java Swing", "SQL Server", "Figma"],
+      "i worked as a full-stack developer. It has features like post new post, comments, like, share,...",
+    tags: ["Next.js", "taildwind, SCSS", "Prisma", "MongoDB"],
     imageUrl: wordanalyticsImg,
   },
   {
@@ -158,8 +158,27 @@ export const projectsDataDetail = [
   },
   {
     id: 2,
+    slug: "notion-clone",
+    title: "Notion clone",
+    date: "01/2024",
+    github: "https://github.com/hientt1803/notion-clone",
+    feature: ["Authenticate", "Create, update, delete notes..."],
+    description:
+      "i worked as a full-stack developer. It has features like notion",
+    tags: ["Next.js", "taildwind", "Convex", "Clerk"],
+    listImage: [
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/notion%2Fnotion-2.jpeg?alt=media&token=47b97e34-f1fd-4664-9759-b37f798028d6",
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/notion%2Fnotion-1.jpeg?alt=media&token=3295f90c-9670-40de-ba4a-e92c9b7bea1a",
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/notion%2Fnotion-3.jpeg?alt=media&token=8d5182c0-5a44-4f72-a59d-03f9e21abc84",
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/notion%2Fnotion-4.jpeg?alt=media&token=06cda5b9-d450-4e1c-9a8f-6a2e1197a449",
+      "https://firebasestorage.googleapis.com/v0/b/datn-questions.appspot.com/o/notion%2Fnotion-5.jpeg?alt=media&token=7021679d-d3df-480b-b429-b49ac50cbaec",
+    ],
+  },
+  {
+    id: 3,
     slug: "blog-app",
     title: "Blog Application",
+    date: "01/2024",
     github: "https://github.com/hientt1803/augentern-blog-app",
     feature: [
       "login, log-out, forgot-password,..",
@@ -181,28 +200,12 @@ export const projectsDataDetail = [
     ],
   },
   {
-    id: 3,
-    slug: "phone-store-manager",
-    title: "Phone Store Managerment",
-    github: "https://github.com/alexnguyen03/PhoneSystem",
-    feature: [
-      "login, log-out, forgot-password,..",
-      "checkout (PayPal, VNPay)",
-      "Client (Client can view, searching courses, best course, newest course and course have good comment)",
-      "Student dashboard (Student can access to schedule, class Result, certificate, checkout history, attendance history,..)",
-      "Teacher dashboard (Teachers can take attendance of students, grade students, give task, set assignment,...)",
-      "Admin dashboard (Admin can manager subject, course, schedule, questions, examination,...)",
-    ],
-    description:
-      "A window app for quick managerment phone store. we can manager products, user, Discount, Order, statictis.",
-    tags: ["Java Swing", "SQL Server", "Figma"],
-    listImage: [],
-  },
-  {
     id: 4,
     slug: "full-stack-ecomerce",
     title: "Full Stack E-Commerce",
-    github: "https://github.com/hientt1803/e-commerce-app-springboot-and-reactjs",
+    date: "06/2023",
+    github:
+      "https://github.com/hientt1803/e-commerce-app-springboot-and-reactjs",
     feature: [
       "login, log-out, forgot-password,..",
       "checkout (PayPal, VNPay)",
@@ -221,15 +224,20 @@ export const projectsDataDetail = [
 export const skillsData = [
   "HTML",
   "CSS",
-  "JavaScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "GitHub",
+  "SCSS",
   "Tailwind",
+  "Bootstrap",
+  "Responsive",
+  "Framer Motion",
+  "JavaScript",
+  "React(Next.js)",
+  "Redux",
+  "Java Core",
+  "Java Spring boot",
+  "Restfull APIs",
   "Prisma",
   "MongoDB",
-  "Redux",
-  "Framer Motion",
+  "SQL",
+  "Git",
+  "Trello",
 ] as const;

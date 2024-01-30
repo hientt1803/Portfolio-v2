@@ -2,7 +2,6 @@
 
 import SectionHeading from "@/components/section-heading";
 import { projectsDataDetail } from "@/lib/data";
-import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,8 +24,6 @@ const fadeInAnimationVariants = {
 const ProjectDetailPage = ({ params }) => {
   const data = projectsDataDetail.filter((item) => item.slug === params.slug);
 
-  const { ref } = useSectionInView("Skills");
-
   return (
     <div className="container mx-auto px-auto ">
       <SectionHeading>
@@ -42,25 +39,32 @@ const ProjectDetailPage = ({ params }) => {
       <section className="mb-28 w-full flex-col md:flex-row text-center sm:mb-0 mt-14 flex justify-center">
         <div className="flex flex-1 flex-col items-start gap-3">
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-400 dark:text-white/70 font-semibold">
               PROJECT
             </p>
             <p className="text-2xl font-bold">{data[0]?.title}</p>
           </div>
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-400 dark:text-white/70 font-semibold">
               YEAR
             </p>
             <p className="text-2xl font-bold">{data[0]?.date}</p>
           </div>
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-400 dark:text-white/70 font-semibold">
               GITHUB
             </p>
-            <p className="text-2xl font-bold">{data[0]?.github}</p>
+            <p>
+              <Link
+                href={data[0]?.github}
+                className="dark:text-white text-2xl font-bold underline"
+              >
+                {data[0]?.github}
+              </Link>
+            </p>
           </div>
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-400 dark:text-white/70 font-semibold">
               TECHNOLOGY
             </p>
             <p className="text-2xl font-bold text-start">
@@ -76,7 +80,7 @@ const ProjectDetailPage = ({ params }) => {
         </div>
         <div className="flex flex-1 flex-col items-start gap-3">
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-400 dark:text-white/70 font-semibold">
               DESCRIPTION
             </p>
             <p className="text-2xl font-bold text-start">
@@ -84,7 +88,7 @@ const ProjectDetailPage = ({ params }) => {
             </p>
           </div>
           <div className="mb-6 md:md-14">
-            <p className="text-base text-start text-gray-600 dark:text-white/70 font-medium">
+            <p className="text-base text-start text-gray-400 dark:text-white/70 font-semibold">
               FEATURE
             </p>
             <ul className="text-2xl font-bold text-start">
@@ -98,7 +102,7 @@ const ProjectDetailPage = ({ params }) => {
 
       {/* Image Preview */}
       <section className="mb-28 w-full text-start sm:mb-0 mt-14">
-        <p className="text-base">OVERVIEW</p>
+        <p className="text-base mb-5">OVERVIEW</p>
         <p className="text-6xl font-bold text-start">
           Take a tour around projects
         </p>
@@ -118,7 +122,7 @@ const ProjectDetailPage = ({ params }) => {
             <>
               {data[0]?.listImage.map((item, index) => (
                 <motion.div
-                  className="bg-white borderBlack rounded-xl px-5 mb-3 dark:bg-white/10 dark:text-white/80"
+                  className="bg-white borderBlack rounded-xl dark:bg-white/10 dark:text-white/80 mb-32"
                   key={index}
                   variants={fadeInAnimationVariants}
                   initial="initial"
@@ -134,10 +138,10 @@ const ProjectDetailPage = ({ params }) => {
                     alt={item}
                     width={1000}
                     height={500}
-                    quality={80}
+                    quality={75}
                     layout="responsive"
                     loading="lazy"
-                    className="object-cover shadow-md border mb-10"
+                    className="object-cover shadow-md border"
                   />
                 </motion.div>
               ))}
@@ -148,14 +152,11 @@ const ProjectDetailPage = ({ params }) => {
 
       {/* Get Back Section*/}
       <section className="my-28 py-28 w-full text-center sm:mb-0 mt-14">
-        <p className="text-lg text-center text-gray-500 dark:text-gray-200 mb-6">
+        <p className="text-lg text-center font-semibold text-gray-500 dark:text-gray-200 mb-6">
           DOESN'T SEE ANY THING LEFT
         </p>
         <SectionHeading>
-          <Link
-            href="/"
-            className="flex justify-center align-middle gap-3 underline"
-          >
+          <Link href="/" className="flex justify-center align-middle gap-3">
             <FaChevronCircleLeft size={"3rem"} />{" "}
             <span className="text-6xl">Comeback</span>
           </Link>
